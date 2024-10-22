@@ -2,30 +2,50 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import SHA256 from 'crypto-js/sha256';
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-              <p id="test">
-                  Here's some test code for doing the SHA256 crypto stuff:
-                  <br/>
-                  hunter2 =&nbsp;
-                  {
-                      SHA256('hunter2').toString() //hash for hunter2 = f52fbd32b2b3b86ff88ef6c490628285f482af15ddcb29541f94bcf526a3f6c7
-                  }
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //<div className="App">
+    //  <header className="App-header">
+    //    <img src={logo} className="App-logo" alt="logo" />
+    //          <p id="test">
+    //              Here's some test code for doing the SHA256 crypto stuff:
+    //              <br/>
+    //              hunter2 =&nbsp;
+    //              {
+    //                  SHA256('hunter2').toString() //hash for hunter2 = f52fbd32b2b3b86ff88ef6c490628285f482af15ddcb29541f94bcf526a3f6c7
+    //              }
+    //    </p>
+    //    <a
+    //      className="App-link"
+    //      href="https://reactjs.org"
+    //      target="_blank"
+    //      rel="noopener noreferrer"
+    //    >
+    //      Learn React
+    //    </a>
+    //  </header>
+    //</div>
+      <div className="App container">
+          {/*add nav bar*/}
+          <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#0F4D91' }}>
+              <div className="container-fluid">
+                  <Link className="navbar-brand" to="/">MPDC Site Selector</Link>
+                  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <span className="navbar-toggler-icon"></span>
+                  </button>
+                  <div className="collapse navbar-collapse" id="navbarNav">
+                      <div className="navbar-nav">
+                          <Link className="nav-link active" to="/Home">Home</Link>
+                          <Link className="nav-link" to="/Report">Report</Link>
+                          <Link className="nav-link" to="/About">About</Link>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+          <Outlet />
+      </div>
   );
 }
 
