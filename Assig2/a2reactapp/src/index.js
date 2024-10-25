@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./routers/Home";
+import Home from "./routes/Home";
 import Report from "./components/Report";
-import About from "./routers/About";
+import About from "./routes/About";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +20,7 @@ root.render(
                 </Route>
             </Routes>
         </BrowserRouter>
-    <App />
+    {/*<App />*/ } 
   </React.StrictMode>
 );
 
