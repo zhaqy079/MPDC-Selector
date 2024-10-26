@@ -6,7 +6,7 @@ function Home() {
         <div className="homepage">
 
             <h1>Welcome to MPDC Site Selector</h1>
-
+            {/*{Add carousel effect: https://getbootstrap.com/docs/4.0/components/carousel/ */}
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -32,7 +32,8 @@ function Home() {
                 </a>
             </div>
 
-            <p>Introduction content goes here...</p>
+            <p>Your tool for identifying high-priority locations for mobile phone detection cameras.<br /> Log in to start selecting and reporting potential locations today.</p>
+
             <button type="button" className="btn btn-info">Login</button>
         </div>
     );
