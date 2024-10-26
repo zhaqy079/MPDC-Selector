@@ -23,20 +23,20 @@ function Login() {
         if (response.json()) {
             <Link to="/Dashboard"></Link>
         } else {
-
+            setError('Invalid username or password');
         }
     return (
         <div className="loginpage" >
 
             <h2>Login</h2>
-            <form>
+            <form onSubmit={loginForm}>
                 <div>
                     <label className="form-label">User Name: </label>
-                    <input required type="text" className="form-control" placeholder="Username" />
+                    <input required type="text" className="form-control" placeholder="Username" ref={usernameRef} />
                 </div>
                 <div>
                     <label className="form-label">Password: </label>
-                    <input required type="password" className="form-control" placeholder="Password" />
+                    <input required type="password" className="form-control" placeholder="Password" ref={passwordRef} />
                 </div>
                 <div>
                     <Link to="/Register">
