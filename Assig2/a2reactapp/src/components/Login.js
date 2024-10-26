@@ -1,13 +1,14 @@
 ﻿import React, { useState, useRef } from 'react';
 import SHA256 from 'crypto-js/sha256';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
     const usernameRef = useRef();
     const passwordRef = useRef();
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    const loginForm = (e) => {
+    const loginForm = async (e) => {
         e.preventDefault();
         // Get the value from Ref without binding
         const username = usernameRef.current.value;
@@ -19,12 +20,19 @@ function Login() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userName: username, passwordHash })
-        };
-        if (response.json()) {
-            <Link to="/Dashboard"></Link>
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            if (result) {
+                navigate('/Dashboard');
+            } else {
+                setError('Invalid username or password')
+            }
         } else {
-            setError('Invalid username or password');
-        }
+                setError('An error occurred. Please try again.');
+            }
+        };
     return (
         <div className="loginpage" >
 
