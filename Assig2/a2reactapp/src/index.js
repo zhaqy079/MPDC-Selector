@@ -8,6 +8,7 @@ import Home from "./routes/Home";
 import Report from "./components/Report";
 import About from "./routes/About";
 import Login from "./components/Login";
+import Register from "./components/Register";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
                     <Route path="Report" element={<Report />} />
                     <Route path="About" element={<About />} />
                     <Route path="Login" element={<Login />} />
+                    <Route path="Register" element={<Register />} />
                 </Route>
             </Routes>
         </BrowserRouter>
