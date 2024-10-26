@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -34,7 +34,10 @@ function Home() {
 
             <p>Your tool for identifying high-priority locations for mobile phone detection cameras.<br /> Log in to start selecting and reporting potential locations today.</p>
 
-            <button type="button" className="btn btn-info login-button">Login</button>
+            <Link to="/Login">
+                <button type="button" className="btn btn-info login-button">Login</button>
+            </Link>
+           
         </div>
     );
 }
