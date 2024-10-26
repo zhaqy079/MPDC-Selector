@@ -14,8 +14,17 @@ function Login() {
         const password = passwordRef.current.value;
         // Hash the password
         const passwordHash = SHA256(password).toString();
+        // Fetch the user request and send POST data
+        const response = await fetch(`/api/Login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userName: username, passwordHash })
+        };
+        if (response.json()) {
+            <Link to="/Dashboard"></Link>
+        } else {
 
-
+        }
     return (
         <div className="loginpage" >
 
