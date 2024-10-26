@@ -28,9 +28,9 @@ function App() {
     //    </a>
     //  </header>
     //</div>
-      <div className="App container">
+      <div className="App">
           {/*add nav bar*/}
-          {/*logo reference: */}
+          {/*logo icon reference: {https://icons8.com/icon/6419/bullet-camera}*/}
           {/*{nav bar reference:https://getbootstrap.com/docs/5.3/components/navbar/#nav}*/}
           <nav className="navbar navbar-expand-lg" >
               <div className="container-fluid">
@@ -57,7 +57,14 @@ function App() {
                   </div>
               </div>
           </nav>
-          <Outlet />
+          {/* Outer container for main background */}
+          <div className="main-container">
+              {/* Inner container with content */}
+              <div className="inner-content">
+                  <Outlet /> 
+              </div>
+          </div>
+          
       </div>
   );
 }
