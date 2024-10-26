@@ -1,5 +1,6 @@
 ﻿import React, { useState } from 'react';
 import SHA256 from 'crypto-js/sha256';
+import { Link } from "react-router-dom";
 
 function Login() {
 
@@ -20,8 +21,11 @@ function Login() {
                     <input required type="password" className="form-control" placeholder="Password" />
                 </div>
                 <div>
-                    <p className="register"> Don't have an account? <br/> <span>Sign up at here</span></p>
+                    <Link to="/Register">
+                        <p className="register-link"> Don't have an account? <br /> <span>Sign up at here</span></p>
+                    </Link>
                 </div>
+                
                 <button type="submit" className="btn btn-info">Login</button>
             </form>
         </div >
