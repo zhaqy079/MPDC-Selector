@@ -66,8 +66,16 @@
     background-color: #f5f5f5;
     opacity: 0.8;
     border-radius: 3px;
-    padding: 240px;
+    padding: 80px;
     width: 90%;
     max-width: 1000px;
-    color: black;
+    /*Adjust inner content display */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+/*Home page setting*/
+.homepage {
+
 }
