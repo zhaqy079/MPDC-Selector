@@ -9,6 +9,7 @@ import Report from "./components/Report";
 import About from "./routes/About";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Dashboard from './components/Dashboard'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
                     <Route path="About" element={<About />} />
                     <Route path="Login" element={<Login />} />
                     <Route path="Register" element={<Register />} />
+                    <Route path="Dashboard" element={<Dashboard />} />
                 </Route>
             </Routes>
         </BrowserRouter>
