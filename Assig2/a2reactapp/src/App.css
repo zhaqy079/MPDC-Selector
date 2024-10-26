@@ -66,16 +66,18 @@
     background-color: #f5f5f5;
     opacity: 0.8;
     border-radius: 3px;
-    padding: 80px;
+    padding: 20px;
     width: 90%;
     max-width: 1000px;
     /*Adjust inner content display */
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 /*Home page setting*/
-.homepage {
-
+.login-button {
+    font-size: 1.25rem; 
+    padding: 12px 24px; 
+    
 }

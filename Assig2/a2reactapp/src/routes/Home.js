@@ -34,7 +34,7 @@ function Home() {
 
             <p>Your tool for identifying high-priority locations for mobile phone detection cameras.<br /> Log in to start selecting and reporting potential locations today.</p>
 
-            <button type="button" className="btn btn-info">Login</button>
+            <button type="button" className="btn btn-info login-button">Login</button>
         </div>
     );
 }
