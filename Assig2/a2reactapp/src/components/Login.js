@@ -43,7 +43,7 @@ function Login() {
     return (
         <div className="loginpage" >
 
-            <h2>Login</h2>
+            <h2>Log In</h2>
             <form onSubmit={loginForm}>
                 <div>
                     <label className="form-label">User Name: </label>
