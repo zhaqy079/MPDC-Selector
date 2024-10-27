@@ -22,21 +22,16 @@ function Dashboard() {
                     {/* Add search results content, will implement at part B's tasks' */}
                     <h4>Find Potential Mobile Phone Detection Camera Locations</h4>
                     <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
-                    <div className="row">
-                        <div className="col-4">
-                    <Link to="/Report">
-                        <button type="button" className="btn btn-warning">Check Report</button>
+                        <div className="dashboard-button">
+                            <Link to="/Report">
+                                <button type="button" className="btn btn-warning mr-2">Check Report</button>
                             </Link>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-4">
                             <button type="button" className="btn btn-outline-info">ReSearch</button>
                         </div>
                     </div>
                  </div>
             </div>
-        </div>
+        
     );
 }
 export default Dashboard;
