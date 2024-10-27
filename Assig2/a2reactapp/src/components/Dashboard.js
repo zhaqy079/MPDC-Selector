@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 function Dashboard() {
     // After user login, get the username
     const username = localStorage.getItem('username');
+
+
     return (
         <div className="dashboard" >
             <div className="dashboard-header">
@@ -15,8 +17,13 @@ function Dashboard() {
             <div className="dashboard-content">
                 <div className="filter-area">
                     <h5>Filter</h5>
-                    <p>Select the filters below to search </p>
-                    <p>Select the filters below to search </p>
+                    <div className="btn-group suburb">
+                        <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" >
+                            Select Suburb
+                        </button>
+                        <div className="dropdown-menu">
+                        </div>
+                    </div>
                 </div>
                 <div className="search-results">
                     {/* Add search results content, will implement at part B's tasks' */}
