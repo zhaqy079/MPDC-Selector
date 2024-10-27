@@ -64,11 +64,11 @@ function Register() {
                 </div>
                 <div>
                     <Link to="/Login">
-                        <p className="login-link"> Already have an account? <br /> <span>Login here</span></p>
+                        <p className="login-link"> Already have an account? <br /> <span>Login at here</span></p>
                     </Link>
                 </div>
                 {error && <p className="error">{error}</p>}
-                <button type="submit" className="btn btn-info">Register</button>
+                <button type="submit" className="btn btn-success">Register</button>
             </form>
         </div >
     );
