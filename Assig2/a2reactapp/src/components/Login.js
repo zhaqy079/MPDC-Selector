@@ -15,23 +15,28 @@ function Login() {
         const password = passwordRef.current.value;
         // Hash the password
         const passwordHash = SHA256(password).toString();
+        console.log({ userName: username, passwordHash });
         // Fetch the user request and send POST data
-        const response = await fetch(`/api/Login`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userName: username, passwordHash })
-        });
+        try {
+            const response = await fetch(`http://localhost:5147/api/Login?userName=${username}&passwordHash=${passwordHash}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+                //body: JSON.stringify({ userName: username, passwordHash })
+            });
 
-        if (response.ok) {
-            const result = await response.json();
-            if (result) {
-                navigate('/Dashboard');
+            if (response.ok) {
+                const result = await response.json();
+                if (result) {
+                    navigate('/Dashboard');
+                } else {
+                    setError('Invalid username or password');
+                }
             } else {
-                setError('Invalid username or password')
-            }
-        } else {
                 setError('An error occurred. Please try again.');
             }
+        } catch (error) {
+            setError('A network error occurred. Please try again.');
+        }
         };
     return (
         <div className="loginpage" >
@@ -40,18 +45,18 @@ function Login() {
             <form onSubmit={loginForm}>
                 <div>
                     <label className="form-label">User Name: </label>
-                    <input required type="text" className="form-control" placeholder="Username" ref={usernameRef} />
+                    <input required type="text" className="form-control" placeholder="Username" ref={usernameRef} autoComplete="username" />
                 </div>
                 <div>
                     <label className="form-label">Password: </label>
-                    <input required type="password" className="form-control" placeholder="Password" ref={passwordRef} />
+                    <input required type="password" className="form-control" placeholder="Password" ref={passwordRef} autoComplete="password" />
                 </div>
                 <div>
                     <Link to="/Register">
                         <p className="register-link"> Don't have an account? <br /> <span>Sign up at here</span></p>
                     </Link>
                 </div>
-                
+                {error && <p className="error">{error}</p>}
                 <button type="submit" className="btn btn-info">Login</button>
             </form>
         </div >
