@@ -27,6 +27,8 @@ function Login() {
             if (response.ok) {
                 const result = await response.json();
                 if (result) {
+                    // Save the username in Local Storage
+                    localStorage.setItem('username', username);
                     navigate('/Dashboard');
                 } else {
                     setError('Invalid username or password');
