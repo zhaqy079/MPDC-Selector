@@ -1,6 +1,9 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Suburb({ }) {
+    // Set the state variable suburbs, and function setSuburbs to hold the list of suburbs
+    const [suburbs, setSuburbs] = useState([]);
 
     return (
         <div className="btn-group suburb">
@@ -15,3 +18,4 @@ function Suburb({ }) {
     
 }
 export default Suburb;
+// Reference: reactJS SPA React Routing - CardListNew, CardDetail Components.
