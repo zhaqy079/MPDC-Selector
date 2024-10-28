@@ -16,11 +16,19 @@ function Suburb({ }) {
 
     return (
         <div className="btn-group suburb">
-            <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" >
-                Select Suburb
-            </button>
-            <div className="dropdown-menu">
-            </div>
+            <button type="button" className="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" >Suburb</button>
+            {/*Map over the suburbs array to create a list of dropdown items*/}
+            <ul className="dropdown-menu">
+                {suburbs.map((suburb) => (
+                    <li key={suburb}>
+                        <Link
+                            className="dropdown-item" >
+                            {/*to={`/suburb/${suburb}`} >*/}
+                            {suburb} 
+                        </Link>
+                    </li>
+                ) )}
+            </ul>
         </div>
 
     );
