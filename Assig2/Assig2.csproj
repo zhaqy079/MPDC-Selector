@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="a2reactapp\src\components\" />
+    <None Remove="a2reactapp\src\routes\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Home\Privacy.cshtml" />
     <None Include="Views\Shared\Error.cshtml" />
@@ -46,4 +50,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="a2reactapp\src\components\" />
+    <Folder Include="a2reactapp\src\routes\" />
+  </ItemGroup>
 </Project>
