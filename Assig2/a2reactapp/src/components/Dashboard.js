@@ -24,24 +24,28 @@ function Dashboard() {
                         <Suburb />
                         <label className="form-label">Date</label>
                         <Suburb />
-                        <label className="form-label">Local Area</label>
+                        <label className="form-label">Description</label>
                         <Suburb />
+                        <br />
                         <button type="button" className="btn btn-info filter-button">Find Location</button>
                     </div>
-
                 </div>
                 <div className="search-results">
                     {/* Add search results content, will implement at part B's tasks' */}
                     <h4>Find Potential Mobile Phone Detection Camera Locations</h4>
                     <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
-                        <div className="dashboard-button">
+                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
+                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
+                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
+                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
+                    <div className="dashboard-button">
                             <Link to="/Report">
-                                <button type="button" className="btn btn-warning mr-2">Check Report</button>
+                                <button type="button" className="btn btn-warning report-button ">Check Report</button>
                             </Link>
-                            <button type="button" className="btn btn-outline-info">ReSearch</button>
-                        </div>
+                            <button type="button" className="btn btn-outline-info refresh-button">ReSearch</button>
                     </div>
-                 </div>
+                </div>
+            </div>
             </div>
         
     );

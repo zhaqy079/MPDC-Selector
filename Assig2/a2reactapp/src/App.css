@@ -85,6 +85,7 @@
 .dashboard {
     display: flex;
     flex-direction: column;
+    padding:20px;
 }
 .dashboard-header {
     display: flex;
@@ -102,6 +103,31 @@
     display: flex;
     flex-direction: column;
     background-color: #A59F9F;
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+}
+
+    .filter-area h5 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+.filter-button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .search-results {
@@ -110,17 +136,11 @@
     flex-direction: column;
     background-color: #D9D9D9;
 }
-h2, h4, h5 {
-    margin-top: 0.5em;
-    margin-left: 0.2em;
-    margin-bottom: 20px;
+.dashboard-button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; 
+    margin-top: 20px;
 }
-.filter-options {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-    
-}
-.filter-button {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-}
+
+
