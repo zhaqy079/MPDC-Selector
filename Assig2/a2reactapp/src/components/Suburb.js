@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Suburb({ }) {
     // Set the state variable suburbs, and function setSuburbs to hold the list of suburbs
     const [suburbs, setSuburbs] = useState([]);
-    const [selected, setSelected] = useState(["Select Suburb"]);
+    const [selected, setSelected] = useState(["Suburb"]); // Update the select suburb dropdown item button default value
 
     // Fetch the list of suburbs from the Endpoint API
     useEffect(() => {
@@ -15,6 +15,7 @@ function Suburb({ }) {
                 console.log(err); 
             });
     }, []);
+
     // Update Suburb selected button label to display user selected suburb
     const userSelected = (suburb) => {
         setSelected(suburb);
