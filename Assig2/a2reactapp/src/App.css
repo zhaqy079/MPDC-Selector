@@ -152,3 +152,10 @@
 }
 
 
+/*Suburb filter setting*/
+/*Ref:https://stackoverflow.com/questions/60934195/how-to-make-element-scrollable*/
+.suburb .dropdown-menu {
+    max-height: 200px; 
+    overflow-y: auto; 
+    width: 200px; 
+}

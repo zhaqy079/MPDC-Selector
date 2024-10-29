@@ -22,7 +22,7 @@ function Suburb({ }) {
                 {suburbs.map((suburb) => (
                     <li key={suburb}>
                         <Link
-                            className="dropdown-item" >
+                            className="dropdown-item">
                             {/*to={`/suburb/${suburb}`} >*/}
                             {suburb} 
                         </Link>
