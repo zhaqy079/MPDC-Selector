@@ -136,6 +136,14 @@
     flex-direction: column;
     background-color: #D9D9D9;
 }
+    .search-results h4 {
+        font-size: 1.2rem;
+        padding: 6px 12px;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
 .dashboard-button {
     display: flex;
     justify-content: flex-end;

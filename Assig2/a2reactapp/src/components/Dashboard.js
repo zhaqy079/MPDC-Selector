@@ -32,17 +32,14 @@ function Dashboard() {
                 </div>
                 <div className="search-results">
                     {/* Add search results content, will implement at part B's tasks' */}
-                    <h4>Find Potential Mobile Phone Detection Camera Locations</h4>
-                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
-                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
-                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
-                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
-                    <p>Select the filters below to search for potential locations for mobile phone detection cameras based on expiationDB.</p>
+                    <h4>Select Potential MPDC Locations</h4>
+                    <p>Select the filters at the right to search for potential locations for mobile phone detection cameras based on your search options.</p>
+                    
                     <div className="dashboard-button">
                             <Link to="/Report">
                                 <button type="button" className="btn btn-warning report-button ">Check Report</button>
-                            </Link>
-                            <button type="button" className="btn btn-outline-info refresh-button">ReSearch</button>
+                        </Link>
+                        <button type="button" className="btn btn-outline-info refresh-button" onClick={() => window.location.reload()}>ReSearch</button>
                     </div>
                 </div>
             </div>
