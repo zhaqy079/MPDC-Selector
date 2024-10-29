@@ -1,6 +1,8 @@
 ﻿import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Suburb from './Suburb';
+import Road from './RoadName';
+import Offence from './OffenceDescription';
 
 function Dashboard() {
     // After user login, get the username
@@ -18,14 +20,14 @@ function Dashboard() {
                 <div className="filter-area">
                     <h5>Filter</h5>
                     <div className="filter-options">
-                        <label className="form-label">Suburb</label>
+                        <label className="form-label">Select a Suburb:</label>
                         <Suburb />
-                        <label className="form-label">Road</label>
+                        <label className="form-label">Select a Road:</label>
+                        <Road />
+                        <label className="form-label">Select a Date:</label>
                         <Suburb />
-                        <label className="form-label">Date</label>
-                        <Suburb />
-                        <label className="form-label">Description</label>
-                        <Suburb />
+                        <label className="form-label">Enter Description:</label>
+                        <Offence />
                         <br />
                         <button type="button" className="btn btn-info filter-button">Find Location</button>
                     </div>
@@ -40,6 +42,7 @@ function Dashboard() {
                                 <button type="button" className="btn btn-warning report-button ">Check Report</button>
                         </Link>
                         <button type="button" className="btn btn-outline-info refresh-button" onClick={() => window.location.reload()}>ReSearch</button>
+                        {/*ref: https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/*/}
                     </div>
                 </div>
             </div>
