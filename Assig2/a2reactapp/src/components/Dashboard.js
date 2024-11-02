@@ -8,7 +8,8 @@ import IncidentDate from './Date';
 function Dashboard() {
     // After user login, get the username
     const username = localStorage.getItem('username');
-
+    // Add State var for selected suburb
+    const [selectedSuburb, setSelectedSuburb] = useState("");
 
     return (
         <div className="dashboard" >
@@ -22,9 +23,11 @@ function Dashboard() {
                     <h5>Filter</h5>
                     <div className="filter-options">
                         <label className="form-label">Select a Suburb:</label>
-                        <Suburb />
+                        {/*Hold the function to update the selectedSuburb*/}
+                        <Suburb setSelectedSuburb = setSelectedSuburb} />
                         <label className="form-label">Select a Road:</label>
-                        <Road />
+                        {/*Accept the selectedSuburb to fetch the roadName*/}
+                        <Road selectedSuburb = {selectedSuburb} /> 
                         <label className="form-label">Select a Date:</label>
                         <IncidentDate />
                         <label className="form-label">Enter Description:</label>
