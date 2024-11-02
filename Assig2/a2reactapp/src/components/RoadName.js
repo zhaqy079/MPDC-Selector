@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Road({ selectedSuburb}) {
     // Set the state variable roads, and the function setRoad to hold the list of RoadName based on user selected suburb
     const [roads, setRoads] = useState([]);
+    const [searchRoad, setSearchRoad] = useState(['']); // Update the autocomplete dropdownlist button default value as empty/ user's enter
 
     // Fetch the list of road name from the Get_ListCamerasInSuburb endpoint
     // Refence: https://iqbalfn.github.io/bootstrap-autocomplete/
@@ -28,7 +29,10 @@ function Road({ selectedSuburb}) {
                     placeholder="Road name"
                     list="roadNameList"
                     autoComplete="off"
-                    //onChange={(e) => setRoads(e.target.value)}
+                    value={searchRoad}
+                    onChange={(e) => setSearchRoad(e.target.value)}
+                    // Disable if no suburb is selected
+                    disabled={!selectedSuburb} 
                     required />
                 <datalist id="roadNameList">
                     {roads.map((road, index) => (
@@ -36,8 +40,8 @@ function Road({ selectedSuburb}) {
                     ))}
                 </datalist>
             </div>
-            <div class="invalid-feedback">
-                 Please enter a Road Name.
+            <div className="invalid-feedback">
+                { selectedSuburb ? "Please enter a Road Name." : "Please select a suburb first."}
             </div>
         </div >
     );
