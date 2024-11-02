@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Suburb from './Suburb';
 import Road from './RoadName';
 import Offence from './OffenceDescription';
+import IncidentDate from './Date'; 
 
 function Dashboard() {
     // After user login, get the username
@@ -25,7 +26,7 @@ function Dashboard() {
                         <label className="form-label">Select a Road:</label>
                         <Road />
                         <label className="form-label">Select a Date:</label>
-                        <Suburb />
+                        <IncidentDate />
                         <label className="form-label">Enter Description:</label>
                         <Offence />
                         <br />
