@@ -24,10 +24,10 @@ function Dashboard() {
                     <div className="filter-options">
                         <label className="form-label">Select a Suburb:</label>
                         {/*Hold the function to update the selectedSuburb*/}
-                        <Suburb setSelectedSuburb = setSelectedSuburb} />
+                        <Suburb setSelectedSuburb={ setSelectedSuburb} />
                         <label className="form-label">Select a Road:</label>
                         {/*Accept the selectedSuburb to fetch the roadName*/}
-                        <Road selectedSuburb = {selectedSuburb} /> 
+                        <Road selectedSuburb={ selectedSuburb} /> 
                         <label className="form-label">Select a Date:</label>
                         <IncidentDate />
                         <label className="form-label">Enter Description:</label>
