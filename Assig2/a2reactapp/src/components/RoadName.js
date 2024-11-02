@@ -24,10 +24,10 @@ function Road({ selectedSuburb }) {
             <div class="form-floating is-invalid">
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control is-invalid"
                     placeholder="Enter Road Name"
                     list="roadNameList"
-                    autoComplete="on"
+                    autoComplete="off"
                     value={searchRoad}
                     onChange={(e) => setSearchRoad(e.target.value)}
                     // Disable if no suburb is selected
@@ -40,7 +40,7 @@ function Road({ selectedSuburb }) {
                 </datalist>
             </div>
             <div className="invalid-feedback">
-                { selectedSuburb ? "Please enter a Road Name." : "Please select a suburb first."}
+                {searchRoad === "" ? (selectedSuburb? "Please enter a Road Name.": "Please select a suburb first." ) : null}
             </div>
         </div >
     );
