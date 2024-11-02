@@ -30,7 +30,7 @@ function Dashboard() {
                         <Road selectedSuburb={ selectedSuburb} /> 
                         <label className="form-label">Select a Date:</label>
                         <IncidentDate />
-                        <label className="form-label">Enter Description:</label>
+                        <label className="form-label">Select Description:</label>
                         <Offence />
                         <br />
                         <button type="button" className="btn btn-info filter-button">Find Location</button>
