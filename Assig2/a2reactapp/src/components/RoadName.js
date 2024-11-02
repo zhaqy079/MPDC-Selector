@@ -12,7 +12,7 @@ function Road({ selectedSuburb }) {
         if (selectedSuburb) {
             fetch(`http://localhost:5147/api/Get_ListCamerasInSuburb?suburb=${selectedSuburb}&locationIdsOnly=false`)
                 .then(response => response.json())
-                .then(data => setRoads(data.map(item => item.roadName)))
+                .then(data => setRoads(data.map(item => item.roadName))) // Match the DB CameraCodes Table.
                 .catch(err => console.log(err));
                 } else {
                     setRoads([]);
