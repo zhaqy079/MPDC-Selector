@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function IncidentDate({ }) {
+function LocalArea({ }) {
     return (
         <div className="form-group">
             <input
@@ -11,4 +11,6 @@ function IncidentDate({ }) {
         </div>
     );
 }
-export default IncidentDate;
+export default LocalArea;
+
+//URL ref: https://www.unixtimestamp.com/
