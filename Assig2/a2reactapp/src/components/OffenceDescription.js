@@ -7,9 +7,9 @@ function Offence() {
     // Set the state to track the selected offence
     const [selectedOffence, setSelectedOffence] = useState("");
 
-    // Fetch the list of offences descriptions from Get_SearchOffencesByDescription
+    // Fetch the list of offences descriptions from Get_SearchOffencesByDescription, related to "phone"
     useEffect(() => {
-        fetch(`http://localhost:5147/api/Get_SearchOffencesByDescription?offenceCodesOnly=false`)
+        fetch(`http://localhost:5147/api/Get_SearchOffencesByDescription?searchTerm=phone&offenceCodesOnly=false`)
             .then(response => response.json())
             .then(data => setOffences(data))
             .catch(err => {
