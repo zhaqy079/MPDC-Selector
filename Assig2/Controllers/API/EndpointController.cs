@@ -317,5 +317,20 @@ namespace Assig2.Controllers.API
             return Convert.ToHexString(inputHash);
         }
 
+        /// <summary>
+        /// Gets a list of LsaDescription that exist in the database.
+        /// </summary>
+        /// <returns>List of LsaDescription</returns>
+        // GET: /api/Get_ListCameraSuburbs
+        [HttpGet(Name = "Get_ListLocalSeriveArea")]
+        public async Task<object> Get_ListLocalServiceArea()
+        {
+            var lsaContext = _context.LocalServiceAreas;
+            var lsaDescriptions = await lsaContext
+                .Select(i => i.LsaDescription)
+                .ToListAsync();
+            return lsaDescriptions.Distinct().OrderBy(i => i);
+        }
+
     }
 }
