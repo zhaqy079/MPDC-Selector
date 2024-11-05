@@ -11,7 +11,8 @@ function LocalArea({ }) {
     useEffect(() => {
         fetch(`http://localhost:5147/api/Get_ListLocalServiceArea`)
             .then(response => response.json())
-            .then(data => setLsaDescription(data))
+            .then(data => setLsaDescription(data.filter(lsa => ["NORTHERN DISTRICT", "EASTERN DISTRICT", "SOUTHERN DISTRICT", "WESTERN DISTRICT"].includes(lsa))
+            ))
             .catch (err => {
                 console.log(err);
             });
@@ -28,8 +29,8 @@ function LocalArea({ }) {
                 value={lsa}
                 onChange={(e) => setSelectedLsa(e.target.value)}
                 id={`flexCheckDefault-${index}`} />
-            <label className="form-check-label" htmlFor = {`flexCheckDefault-${index}`}  >
-                        {lsa}
+            <label className="form-check-label" htmlFor={`flexCheckDefault-${index}`}  >
+                {lsa}
                 </label>
             </div >
 
