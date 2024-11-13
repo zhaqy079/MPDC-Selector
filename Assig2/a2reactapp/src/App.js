@@ -30,7 +30,7 @@ function App() {
                   <div className="collapse navbar-collapse" id="navbarNav">
                       <div className="navbar-nav">
                           <Link className="nav-link active" to="/Home">Home</Link>
-                          <Link className="nav-link" to="/Report">Report</Link>
+                          {/*<Link className="nav-link" to="/Report">Report</Link>*/}
                           <Link className="nav-link" to="/About">About</Link>
                       </div>
                   </div>

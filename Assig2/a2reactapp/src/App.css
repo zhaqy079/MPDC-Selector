@@ -85,6 +85,7 @@
 .dashboard {
     display: flex;
     flex-direction: column;
+    padding:20px;
 }
 .dashboard-header {
     display: flex;
@@ -102,6 +103,31 @@
     display: flex;
     flex-direction: column;
     background-color: #A59F9F;
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+}
+
+    .filter-area h5 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+.filter-button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .search-results {
@@ -110,17 +136,73 @@
     flex-direction: column;
     background-color: #D9D9D9;
 }
-h2, h4, h5 {
-    margin-top: 0.5em;
-    margin-left: 0.2em;
+    .search-results h4 {
+        font-size: 1.2rem;
+        padding: 6px 12px;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+.dashboard-button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+
+/*Suburb filter setting*/
+/*Ref:https://stackoverflow.com/questions/60934195/how-to-make-element-scrollable*/
+.suburb .dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 200px;
+}
+
+/*Checkbox font style*/
+.form-check-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/*My notes info*/
+.notes {
+    font-size: 0.8rem;
+    color: #666; 
+}
+
+/*Report design*/
+.report-page h2 {
+    text-align: center;
+    
     margin-bottom: 20px;
 }
-.filter-options {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+.report-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
     
 }
-.filter-button {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+.report-image {
+    width: 300px;
+    height: auto;
+    aspect-ratio: 4/3;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.report-description h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.report-description p {
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
