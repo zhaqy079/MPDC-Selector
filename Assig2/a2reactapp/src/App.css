@@ -171,3 +171,38 @@
     font-size: 0.8rem;
     color: #666; 
 }
+
+/*Report design*/
+.report-page h2 {
+    text-align: center;
+    
+    margin-bottom: 20px;
+}
+.report-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    
+}
+.report-image {
+    width: 300px;
+    height: auto;
+    aspect-ratio: 4/3;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.report-description h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.report-description p {
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
