@@ -335,21 +335,22 @@ namespace Assig2.Controllers.API
         }
 
         /// <summary>
-        /// Gets a list of recommended locations filtered by lsaDescription and offenceDescription
+        /// Gets a list of recommended locations filtered by lsaDescription ( and offenceDescription ( I cant achieve this feature) ) 
         /// </summary>
         /// <returns>the top 2 recommended locations.</returns>
         // GET: /api/Get_RecommendedLocations
         //Reference: https://www.youtube.com/watch?v=NYpOaPC6jrg
         [HttpGet("Get_RecommendedLocations")]
-        public async Task<IActionResult> Get_RecommendedLocations([FromQuery] string offenceDescription, [FromQuery] List<string> lsaDescriptions)
+        public async Task<IActionResult> Get_RecommendedLocations([FromQuery] List<string>? lsaDescriptions)
         {
-            // Fetch recommended locations within the specified LSAs by suburb and road name
+            // Fetch recommended locations within the specified LSAs
             var recommendedLocations = await _context.CameraCodes
                 .Join(_context.Expiations, cc => cc.LocationId, e => e.CameraLocationId, (cc, e) => new { cc, e })
-                .Join(_context.LocalServiceAreas, ce => ce.e.LsaCode, lsa => lsa.LsaCode, (ce, lsa) => new { ce.cc, ce.e, lsa })
-                .Where(x => lsaDescriptions.Contains(x.lsa.LsaDescription) &&
-                            _context.Offences
-                            .Any(o => o.OffenceCode == x.e.OffenceCode && o.Description.Contains(offenceDescription)))
+                .Join(_context.LocalServiceAreas, ce => ce.e.LsaCode, lsa => lsa.LsaCode, (ce, lsa) => new { ce.cc, lsa })
+                //.Join(_context.Offences, cel => cel.e.OffenceCode, o => o.OffenceCode, (cel, o) => new { cel.cc, cel.lsa, o })
+                //.Where(x => x.o.Description.Contains(offenceDescription) && lsaDescriptions.Contains(x.lsa.LsaDescription) &&
+                //new[] { "A491", "A544", "M851", "M852" }.Contains(x.o.OffenceCode))
+                .Where(x => lsaDescriptions.Contains(x.lsa.LsaDescription))
                 .GroupBy(x => new { x.cc.Suburb, x.cc.RoadName, x.lsa.LsaDescription })
                 .OrderByDescending(g => g.Count())
                 .Select(g => new RecommendedLocationViewModel

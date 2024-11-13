@@ -1,4 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using Assig2.Models;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace Assig2.ViewModel
 {
 	public class RecommendedLocationViewModel
